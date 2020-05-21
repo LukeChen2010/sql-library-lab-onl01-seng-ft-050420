@@ -38,7 +38,7 @@ def select_series_title_with_most_human_characters
    INNER JOIN series
    ON characters.author_id = series.author_id
    GROUP BY series.title
-   ORDER BY SUM(CASE WHEN characters.species = \"huma\" THEN 
+   ORDER BY SUM(CASE WHEN characters.species = \"human\" THEN 
    1 ELSE 0 END) DESC LIMIT 1;"
 end
 
