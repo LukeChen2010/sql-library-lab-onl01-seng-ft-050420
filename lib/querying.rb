@@ -3,8 +3,8 @@ def select_books_titles_and_years_in_first_series_order_by_year
   FROM books
   INNER JOIN series
   ON books.series_id = series.id
-  ORDER BY books.year
-  WHERE series.id = (SELECT MIN(id) FROM series);
+  WHERE series.id = (SELECT MIN(id) FROM series)
+  ORDER BY books.year;
 end
 
 def select_name_and_motto_of_char_with_longest_motto
